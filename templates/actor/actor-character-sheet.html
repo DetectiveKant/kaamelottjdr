@@ -1,0 +1,173 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+	<!-- ### HEADER ### -->
+    <header class="sheet-header flexrow">
+        <img  class="profile" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="128" width="128"/>
+        <section class="header details flexcol">
+			<!-- Name -->
+			<h1 class="charname">
+				<input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}"/>
+			</h1>
+
+			<div class="flexrow">
+				<!-- Class and Exp -->			
+				<aside class="classexp flexrow">
+					<div class="classname" title="{{multiclassLabels}}">
+						<label>{{ localize "KAAMELOTTJDR.DETAILS.Class" }} : </label>
+						<input name="system.details.job" type="text" value="{{system.details.job}}" placeholder="None"/>
+					</div>
+					
+					<!-- Current level -->
+					<div class="charlevel" title="{{multiclassLabels}}">
+						<label>{{ localize "KAAMELOTTJDR.DETAILS.Level" }} : </label>
+						<input name="system.details.level" type="text" value="{{system.details.level}}" data-dtype="Number"/>
+					</div>
+				</aside>
+			</div>
+			
+			<div class="primary-stats flexcol">
+				<table>
+					<tr>
+						<th>{{ localize "KAAMELOTTJDR.STAT.Primary" }}</th>
+						{{#each system.primary as |stat key|}}
+							{{#if stat.exists}}
+								<th>{{stat.label}}</th>
+							{{/if}}
+						{{/each}}
+					</tr>
+					<tr>
+						<th>{{ localize "KAAMELOTTJDR.STAT.Base" }}</th>
+						{{#each system.primary as |stat key|}}
+							{{#if stat.exists}}
+								<th><input type="number" name="system.primary.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/></th>
+							{{/if}}
+						{{/each}}
+					</tr>
+					<tr>
+						<th>{{ localize "KAAMELOTTJDR.STAT.Bonus" }}</th>
+						{{#each system.primary as |stat key|}}
+							{{#if stat.exists}}
+								<th><input type="number" name="system.primary.{{key}}.bonus" value="{{stat.bonus}}" data-dtype="Number"/></th>
+							{{/if}}
+						{{/each}}
+					</tr>
+					<tr>
+						<th>{{ localize "KAAMELOTTJDR.STAT.Total" }}</th>
+						{{#each system.primary as |stat key|}}
+							{{#if stat.exists}}
+								<th><span class="rollable" data-roll="{{stat.total}}-1d100" data-label="{{stat.label}}">{{numberFormat stat.total decimals=0}}</span></th>
+							{{/if}}
+						{{/each}}
+					</tr>
+				</table>
+			</div>
+		</section>
+	</header>
+
+	<!-- ### SHEET BODY ### -->
+	<section class="sheet-body flexrow">
+		<!-- Resources -->	
+		<section class ="body-left-panel flexcol">
+			<div>
+				<table>
+					<tr>
+						<th>{{ localize "KAAMELOTTJDR.RESOURCES.Resources" }}</th>
+					</tr>
+					<tr>
+						<th>{{ localize "KAAMELOTTJDR.RESOURCES.Health" }}</th>
+						<th>
+							<div class="hp res">
+								<input name="system.resources.health.value" type="text" value="{{system.resources.health.value}}" placeholder="0" data-dtype="Number"/>
+								<span class="sep">/</span>
+								<input name="system.resources.health.max" type="text" value="{{system.resources.health.max}}" placeholder="0" data-dtype="Number"/>
+							</div>
+						</th>
+					</tr>
+
+					<tr>
+						<th>{{ localize "KAAMELOTTJDR.RESOURCES.Energy" }}</th>
+						<th>
+							<div class="energy res">
+								<input name="system.resources.energy.value" type="text" value="{{system.resources.energy.value}}" placeholder="0" data-dtype="Number"/>
+								<span class="sep">/</span>
+								<input name="system.resources.energy.max" type="text" value="{{system.resources.energy.max}}" placeholder="0" data-dtype="Number"/>
+							</div>
+						</th>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Secondary Stats -->	
+			<div>
+				<table>
+					<tr>
+						<th colspan="2">{{ localize "KAAMELOTTJDR.STAT.Secondary" }}</th>
+					</tr>
+					{{#each system.secondary as |stat key|}}
+						{{#if stat.exists}}
+							<tr>
+								<th>{{stat.label}}</th>
+								<th>
+									<div class="res">
+										<input name="system.secondary.{{key}}.value" value="{{stat.value}}" type="text" placeholder="0" data-dtype="Number"/>
+									</div>
+								</th>
+							</tr>
+						{{/if}}
+					{{/each}}
+				</table>
+			</div>
+
+			<div class="flexcol">
+				<label>{{ localize "KAAMELOTTJDR.DETAILS.Notes" }}</label>
+				<div class="notes-text">
+					{{editor system.details.player_notes target="system.details.player_notes" button=true owner=owner editable=editable}}
+				</div>
+			</div>
+
+			<div class="flex-item"></div>
+		</section>
+
+		<section class="main-body">
+			<!-- Tab links -->
+			<div class="tabs flexrow">
+				<button class="tablink" onclick="changeTab(event, 'abilities-tab')">{{ localize "KAAMELOTTJDR.DETAILS.Abilities" }}</button>
+				<button class="tablink" onclick="changeTab(event, 'inventory-tab')">{{ localize "KAAMELOTTJDR.ACTOR.Inventory" }}</button>
+				<button class="tablink" onclick="changeTab(event, 'biography-tab')">{{ localize "KAAMELOTTJDR.ACTOR.Biography" }}</button>
+			</div>
+
+			<!-- Tab content -->
+			<div id="abilities-tab" class="body-tab tabcontent" style="display:none">
+				<p>Pas encore fonctionnel, essaie les autres onglets pour le moment.</p>
+			</div>
+			
+			<div id="inventory-tab" class="body-tab tabcontent" style="display:none">
+				<p>Sike ! Pas encore, désolé =[... Peut-être plus de chance avec l'onglet suivant ?</p>
+			</div>
+			
+			<div id="biography-tab" class="body-tab tabcontent" style="display:none">
+				<div class="notes-text">
+					{{editor system.details.biography target="system.details.biography" button=true owner=owner editable=editable}}
+				</div>
+			</div>
+
+			<script>
+				function changeTab(evt, tabName) {
+				  var i, x, tablinks;
+				  x = document.getElementsByClassName("body-tab");
+				  for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				  }
+				  tablinks = document.getElementsByClassName("tablink");
+				  for (i = 0; i < x.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+				  }
+				  document.getElementById(tabName).style.display = "block";
+				  evt.currentTarget.className += " w3-red";
+				}
+			</script>
+
+
+		</section>
+	</section>
+</form>
+

@@ -1,0 +1,70 @@
+{
+	"Actor": {
+	  "types": ["character", "npc"],
+	  "character": {
+		"primary": {
+			"str": { "value": 0, "bonus": 0},
+			"dex": { "value": 0, "bonus": 0},
+			"con": { "value": 0, "bonus": 0},
+			"int": { "value": 0, "bonus": 0},
+			"wis": { "value": 0, "bonus": 0}
+		},
+		
+		"secondary": {
+			"armour": {"value": 0,"bonus": 0},
+			"resistance": {"value": 0,"bonus": 0},
+			"precision": {"value": 0,"bonus": 0},
+			"critrate" : {"value": 0,"bonus": 0},
+			"avoidance": {"value": 0,"bonus": 0},
+			"penetration" : {"value": 0,"bonus": 0},
+			"initiative": {"value": 0,"bonus": 0},
+			"movement": {"value": 0,"bonus": 0}
+		},
+
+		"resources": {
+			"types": ["health", "energy", "magic", "druid_growth", "priest_holy", "ranger_focus"],
+			"health": { "value": 10, "min": 0, "max": 10 },
+			"barrier": {"value": 0, "min": 0, "max": 10 },
+			"energy": {"value": 5, "min": 0,"max": 5},
+			"magic": {"value": 10,"min": 0,"max": 10},
+			"druid_growth": {"value": 0, "min": 0,"max": 7},
+			"priest_holy": {"value": 3,"min": 0,"max": 3},
+			"ranger_focus": {"value": 0, "min": 0,"max": 100}
+		},
+		
+		"details": {
+			"level":1,
+			"biography": "",
+			"player_notes": {
+				"value": "...",
+				"public": ""
+			  },
+			"job" : ""
+		  }
+	  }
+	},
+
+	"Item": {
+	  "types": ["consumable", "weapon"],
+	  "templates": {
+		"itemDescription": {
+			"description": "",
+			"value": ""
+		},
+	    "physicalItem": {
+			"quantity": 1,
+			"weight": 0,
+			"price": 0,
+			"attunement": 0,
+			"equipped": false,
+			"rarity": "",
+			"identified": true
+		  }
+	  },
+	
+	  "weapon": {
+		"templates" : ["itemDescription", "physicalItem"],
+		"damage": "1d6"
+	  }
+	}
+}

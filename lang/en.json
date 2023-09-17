@@ -1,0 +1,44 @@
+{
+  "KAAMELOTTJDR.ACTOR.TypeCharacter": "Personnage",
+  "KAAMELOTTJDR.ACTOR.Inventory": "Inventaire",
+  "KAAMELOTTJDR.ACTOR.Biography": "Biographie",
+
+  "KAAMELOTTJDR.ITEM.TypeConsumable": "Consommable",
+  "KAAMELOTTJDR.ITEM.TypeWeapon": "Arme",
+
+  "KAAMELOTTJDR.STAT.Stat" : "Statistique",
+  "KAAMELOTTJDR.STAT.Primary" : "Statistiques primaires",
+  "KAAMELOTTJDR.STAT.Secondary" : "Statistiques secondaires",
+  "KAAMELOTTJDR.STAT.Base" : "Base",
+  "KAAMELOTTJDR.STAT.Bonus" : "Bonus",
+  "KAAMELOTTJDR.STAT.LevelBonus" : "Bonus de niveau",
+  "KAAMELOTTJDR.STAT.EquipBonus" : "Bonus d'équipement",
+  "KAAMELOTTJDR.STAT.Total" : "Total",
+
+  "KAAMELOTTJDR.DETAILS.Class" : "Classe",
+  "KAAMELOTTJDR.DETAILS.Level" : "Niveau",
+  "KAAMELOTTJDR.DETAILS.Abilities" : "Compétences",
+  "KAAMELOTTJDR.DETAILS.Notes" : "Notes",
+
+  "KAAMELOTTJDR.STAT.PrimaryStr" : "Force",
+  "KAAMELOTTJDR.STAT.PrimaryDex" : "Dextérité",
+  "KAAMELOTTJDR.STAT.PrimaryCon" : "Constitution",
+  "KAAMELOTTJDR.STAT.PrimaryInt" : "Intelligence",
+  "KAAMELOTTJDR.STAT.PrimaryWis" : "Sagesse",
+
+  "KAAMELOTTJDR.STAT.SecondaryArmour" : "Armure",
+  "KAAMELOTTJDR.STAT.SecondaryResistance" : "Résistance",
+  "KAAMELOTTJDR.STAT.SecondaryPrecision" : "Précision",
+  "KAAMELOTTJDR.STAT.SecondaryCritrate" : "Chance Crit.",
+  "KAAMELOTTJDR.STAT.SecondaryAvoidance" : "Esquive",
+  "KAAMELOTTJDR.STAT.SecondaryPenetration" : "Pénétration",
+  "KAAMELOTTJDR.STAT.SecondaryInitiative" : "Initiative",
+  "KAAMELOTTJDR.STAT.SecondaryMovement" : "Vitesse (c/tour)",
+
+  "KAAMELOTTJDR.RESOURCES.Health": "PV",
+  "KAAMELOTTJDR.RESOURCES.Resources": "Ressources",
+  "KAAMELOTTJDR.RESOURCES.Magic": "Magie",
+  "KAAMELOTTJDR.RESOURCES.Energy": "Énergie",
+
+  "KAAMELOTTJDR.MISC.Notes" : "Notes"
+}

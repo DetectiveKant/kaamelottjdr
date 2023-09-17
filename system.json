@@ -1,0 +1,24 @@
+{
+  "name": "kaamelottjdr",
+  "title": "Kaamelott JdR",
+  "description": "Système de jeu maison qu'il est bien.",
+  "version": "0.0.6",
+  "minimumCoreVersion": "10",
+  "compatibleCoreVersion": "11",
+  "author": "DetectiveKant",
+  "styles": ["styles/kaamelottjdr.css"],
+  "esmodules" : [
+    "module/kaamelottjdr.mjs"
+  ],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }],
+  "gridDistance": 1.5,
+  "gridUnits": "m",
+  "initiative": "@primary.dex - 1d100",
+  "primaryTokenAttribute": "resources.health"
+}
