@@ -3,11 +3,11 @@
 	  "types": ["character", "npc"],
 	  "character": {
 		"primary": {
-			"str": { "value": 0, "bonus": 0},
-			"dex": { "value": 0, "bonus": 0},
-			"con": { "value": 0, "bonus": 0},
-			"int": { "value": 0, "bonus": 0},
-			"wis": { "value": 0, "bonus": 0}
+			"str": { "value": 50, "bonus": 0},
+			"dex": { "value": 50, "bonus": 0},
+			"con": { "value": 50, "bonus": 0},
+			"int": { "value": 50, "bonus": 0},
+			"wis": { "value": 50, "bonus": 0}
 		},
 		
 		"secondary": {
@@ -18,7 +18,7 @@
 			"avoidance": {"value": 0,"bonus": 0},
 			"penetration" : {"value": 0,"bonus": 0},
 			"initiative": {"value": 0,"bonus": 0},
-			"movement": {"value": 0,"bonus": 0}
+			"movement": {"value": 6,"bonus": 0}
 		},
 
 		"resources": {

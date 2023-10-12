@@ -4,51 +4,6 @@
 /* ----------------------------------------- */
 /*  Flexbox                                  */
 /* ----------------------------------------- */
-.flexrow {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow: hidden;
-  }
-  .flexrow > * {
-    flex: 1;
-  }
-  .flexrow .flex1 {
-    flex: 1;
-  }
-  .flexrow .flex2 {
-    flex: 2;
-  }
-  .flexrow .flex3 {
-    flex: 3;
-  }
-  .flexrow .flex4 {
-    flex: 4;
-  }
-  .flexcol {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
-
-  .flexcol > * {
-    flex: 1;
-  }
-  .flexcol .flex1 {
-    flex: 1;
-  }
-  .flexcol .flex2 {
-    flex: 2;
-  }
-  .flexcol .flex3 {
-    flex: 3;
-  }
-  .flexcol .flex4 {
-    flex: 4;
-  }
-  
   span.sep {
     flex: none;
     margin: 0 1px;
@@ -140,7 +95,6 @@
   .kaamelottjdr .sheet-body .res {
     display:inline-block;
     white-space: nowrap;
-    overflow:hidden;
   }
 
   .kaamelottjdr .sheet-body .res input{

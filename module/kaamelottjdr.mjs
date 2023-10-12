@@ -20,6 +20,11 @@ Hooks.once("init", function () {
     // Add custom constants for configuration.
     CONFIG.KAAMELOTTJDR = KAAMELOTTJDR;
 
+    CONFIG.Combat.initiative = {
+        formula: "@primary.dex.value + @secondary.initiative.value - 1d100",
+        decimals: 3
+      };    
+
     // Define custom Document classes
     CONFIG.Actor.documentClass = KAAMELOTTJDRActor;
     // CONFIG.Item.documentClass = KAAMELOTTJDRItem;
